@@ -2,67 +2,73 @@
 using Data;
 using Domain.DTOs;
 using Domain.Entities;
+using Microsoft.AspNetCore.Http;
+using Service.Repository;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
 namespace Service.Products
 {
-    public class ProductsService : IProductsService
+    public class ProductsService : Repository<Product>, IProductsService
     {
         private ShopDbContext _db;
         private IMapper _mapper;
-        public ProductsService(ShopDbContext db, IMapper mapper)
+        public ProductsService(ShopDbContext db, IMapper mapper):base(db)
         {
             _db = db;
             _mapper = mapper;
         }
         public ProductDTO Get(Guid Id)
         {
-            return _mapper.Map<ProductDTO>(_db.Products.Find(Id));
+            return _mapper.Map<ProductDTO>(base.Find(Id));
         }
 
-        public List<Product> GetAll()
+        public List<ProductDTO> GetAll()
         {
-            return _db.Products.ToList();
+            return _mapper.Map<List<ProductDTO>>(_db.Products.ToList());
         }
 
         public bool Insert(ProductDTO model)
         {
             var insert = _mapper.Map<ProductDTO,Product>(model);
             insert.Id = Guid.NewGuid();
-            _db.Products.Add(insert);
-            return _db.SaveChanges() > 0;
+            var result = base.Insert(insert);
+            return !(result == null);
             
         }
 
-        public bool Update(ProductDTO model)
+        public void Update(ProductDTO model)
         {
             var update = _mapper.Map<ProductDTO, Product>(model);
-            var result = _db.Products.Update(update);
-            return _db.SaveChanges() > 0;
+            base.Update(update);
         }
 
-        public string UploadFile(ProductDTO model)
+        public async void UploadFile(List<IFormFile> files, String namePath)
         {
-            //var files = model.File;
-            //long size = files.Sum(f => f.Length);
+            var filePath = Directory.GetCurrentDirectory() + @"\wwwroot\Images\Products\" + namePath;
+            if (Directory.Exists(filePath))
+            {
+                Directory.Delete(filePath, true);
+            }
+            if (files != null && files.Count > 0)
+            {
+                Directory.CreateDirectory(filePath);
+                foreach (var formFile in files)
+                {
+                    if (formFile.Length > 0)
+                    {
+                        using (var stream = File.Create(filePath + @"\" + formFile.FileName))
+                        {
+                            //stream.Write();
+                            await formFile.CopyToAsync(stream);
+                        }
+                    }
+                }
+            }
 
-            //foreach (var formFile in files)
-            //{
-            //    if (formFile.Length > 0)
-            //    {
-            //        var filePath = Path.GetTempFileName();
-
-            //        using (var stream = System.IO.File.Create(filePath))
-            //        {
-            //            await formFile.CopyToAsync(stream);
-            //        }
-            //    }
-            //}
-
-            return "a";
         }
     }
 }

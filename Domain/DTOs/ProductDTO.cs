@@ -10,9 +10,27 @@ namespace Domain.DTOs
         public Guid Id { get; set; }
         public string Name { get; set; }
         public int Quantity { get; set; }
-        public string Image { get; set; }
-
-        public IFormFile File { get; set; }
+        public string Image
+        {
+            get
+            {
+                var result = "";
+                if (File != null)
+                {
+                    for (int i = 0; i < File.Count; i++)
+                    {
+                        if (i == 0)
+                        {
+                            result += File[i].FileName;
+                            continue;
+                        }
+                        result += ";" + File[i].FileName;
+                    }
+                }
+                return result;
+            }
+        }
+        public List<IFormFile> File { get; set; }
 
     }
 

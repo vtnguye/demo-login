@@ -1549,6 +1549,16 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.dll": {}
+        }
+      },
       "Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -1569,6 +1579,7 @@
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
+          "Common": "1.0.0",
           "Microsoft.AspNetCore.Http.Features": "3.0.2",
           "Microsoft.EntityFrameworkCore": "5.0.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.4",
@@ -5877,6 +5888,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "Common/1.0.0": {
+      "type": "project",
+      "path": "../Common/Common.csproj",
+      "msbuildProject": "../Common/Common.csproj"
+    },
     "Data/1.0.0": {
       "type": "project",
       "path": "../Data/Data.csproj",
@@ -5891,6 +5907,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
+      "Common >= 1.0.0",
       "Data >= 1.0.0",
       "Domain >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 3.1.0"
@@ -5927,6 +5944,9 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
+            "D:\\DEMO\\Common\\Common.csproj": {
+              "projectPath": "D:\\DEMO\\Common\\Common.csproj"
+            },
             "D:\\DEMO\\Data\\Data.csproj": {
               "projectPath": "D:\\DEMO\\Data\\Data.csproj"
             },

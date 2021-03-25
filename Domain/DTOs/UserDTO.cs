@@ -4,23 +4,7 @@ using System.Text;
 
 namespace Domain.DTO
 {
-    public class SearchPagingDTO
-    {
-        public int TotalItem { get; set; }
-        public int PageSize { get; set; }
-        public int PageIndex { get; set; }
-        public int TotalPage
-        {
-            get
-            {
-                if(PageSize <= 0)
-                {
-                    return 1;
-                }
-                return (int)Math.Ceiling((decimal)TotalItem / PageSize);
-            }
-        }
-    }
+  
    public  class UserDTO
     {
         public string Username { get; set; }

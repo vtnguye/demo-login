@@ -1,19 +1,17 @@
 ﻿using Domain.DTOs;
 using Domain.Entities;
+using Microsoft.AspNetCore.Http;
+using Service.Repository;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Service.Products
 {
-    public interface IProductsService
+    public interface IProductsService : IRepository<Product>
     {
-        public bool Insert(ProductDTO model);
-
-        public bool Update(ProductDTO model);
-        public ProductDTO Get(Guid Id);
-        public List<Product> GetAll();
-        public string UploadFile(ProductDTO model);
+        public List<ProductDTO> GetAll();
+        public void UploadFile(List<IFormFile> files, String namePath);
        
     }
 }

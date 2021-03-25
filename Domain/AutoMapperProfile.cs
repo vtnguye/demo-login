@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Common.Pagination;
 using Domain.DTO;
 using Domain.DTOs;
 using Domain.Entities;
@@ -14,11 +15,14 @@ namespace Domain
         {
             CreateMap<UserDTO, User>().ReverseMap();
             CreateMap<GetUserDTO, User>().ReverseMap();
-            CreateMap<SearchUserDTO, SearchPagingDTO>().ReverseMap();
             CreateMap<Product, ProductDTO>().ReverseMap();
             CreateMap<LoginDTO, UserDTO>().ReverseMap();
             CreateMap<LoginDTO, User>().ReverseMap();
+            CreateMap<SearchPaginationDTO<UserDTO>, Pagination<UserDTO>>().ReverseMap();
+            CreateMap<List<User>, List<UserDTO>>().ReverseMap();
+            CreateMap<List<Product>, List<ProductDTO>>().ReverseMap();
 
         }
+
     }
 }

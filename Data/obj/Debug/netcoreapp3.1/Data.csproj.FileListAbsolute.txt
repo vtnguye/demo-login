@@ -10,3 +10,5 @@ D:\DEMO\Data\bin\Debug\netcoreapp3.1\Domain.pdb
 D:\DEMO\Data\obj\Debug\netcoreapp3.1\Data.csproj.CopyComplete
 D:\DEMO\Data\obj\Debug\netcoreapp3.1\Data.dll
 D:\DEMO\Data\obj\Debug\netcoreapp3.1\Data.pdb
+D:\DEMO\Data\bin\Debug\netcoreapp3.1\Common.dll
+D:\DEMO\Data\bin\Debug\netcoreapp3.1\Common.pdb

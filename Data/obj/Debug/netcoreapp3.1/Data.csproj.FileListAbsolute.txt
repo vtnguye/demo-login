@@ -1,0 +1,12 @@
+D:\DEMO\Data\obj\Debug\netcoreapp3.1\Data.csprojAssemblyReference.cache
+D:\DEMO\Data\obj\Debug\netcoreapp3.1\Data.AssemblyInfoInputs.cache
+D:\DEMO\Data\obj\Debug\netcoreapp3.1\Data.AssemblyInfo.cs
+D:\DEMO\Data\obj\Debug\netcoreapp3.1\Data.csproj.CoreCompileInputs.cache
+D:\DEMO\Data\bin\Debug\netcoreapp3.1\Data.deps.json
+D:\DEMO\Data\bin\Debug\netcoreapp3.1\Data.dll
+D:\DEMO\Data\bin\Debug\netcoreapp3.1\Data.pdb
+D:\DEMO\Data\bin\Debug\netcoreapp3.1\Domain.dll
+D:\DEMO\Data\bin\Debug\netcoreapp3.1\Domain.pdb
+D:\DEMO\Data\obj\Debug\netcoreapp3.1\Data.csproj.CopyComplete
+D:\DEMO\Data\obj\Debug\netcoreapp3.1\Data.dll
+D:\DEMO\Data\obj\Debug\netcoreapp3.1\Data.pdb

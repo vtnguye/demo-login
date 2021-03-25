@@ -5,10 +5,10 @@ using System.Text;
 
 namespace Service.Repository
 {
-    interface IRepository<T> where T : BaseEntities
+    public interface IRepository<T> where T : BaseEntities
     {
-        void Delete(string id);
-        T Find(string id);
+        void Delete(Guid id);
+        T Find(Guid id);
         T Insert(T entity);
         void Update(T entity);
     }

@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "avg6RlEpsr58T78IAUPgbut68/zm7Xcypu1bd7/v99/IWJIlvrkAQDdOESaKHa/r3H46o4NftMaXeQyyYyAffQ==",
+  "dgSpecHash": "BDAurO5Hs79bwI5D2G0S/36YXtQDJtTAlPiDyDUh1+wI/nHGirl3xGYH/dMl+jTAhoAK/RmwdCK1eT3TpT1rCw==",
   "success": true,
   "projectFilePath": "D:\\DEMO\\Service\\Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.0\\microsoft.aspnetcore.authentication.jwtbearer.3.1.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.http.features\\3.0.2\\microsoft.aspnetcore.http.features.3.0.2.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

@@ -9,7 +9,13 @@ namespace Service.Repository
     public class Repository<T> : IRepository<T> where T : BaseEntities
     {
         public ShopDbContext ShopDbContext { get; set; }
-        public T Find(string id)
+
+        public Repository(ShopDbContext shopDbContext)
+        {
+            ShopDbContext = shopDbContext;
+        }
+
+        public T Find(Guid id)
         {
             return (T)ShopDbContext.Find(typeof(T), id);
         }
@@ -19,7 +25,7 @@ namespace Service.Repository
             ShopDbContext.SaveChanges();
             return entity;
         }
-        public void Delete(string id)
+        public void Delete(Guid id)
         {
             ShopDbContext.Remove(id);
             ShopDbContext.SaveChanges();

@@ -1,4 +1,5 @@
-﻿using Domain.DTOs;
+﻿using Common.Pagination;
+using Domain.DTOs;
 using Domain.Entities;
 using Microsoft.AspNetCore.Http;
 using Service.Repository;
@@ -10,8 +11,9 @@ namespace Service.Products
 {
     public interface IProductsService : IRepository<Product>
     {
-        public List<ProductDTO> GetAll();
+        public List<GetProductDTO> GetAll();
         public void UploadFile(List<IFormFile> files, String namePath);
-       
+        public Pagination<Product> Paging(SearchPaginationDTO<ProductDTO> pagination);
+        public ProductDTO Get(Guid id);
     }
 }

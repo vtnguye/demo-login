@@ -40,7 +40,13 @@ namespace Demo
                        .AllowAnyMethod()
                        .AllowAnyHeader();
             }));
-             //JWT AUTHENTICATION
+            services.AddCors(o => o.AddPolicy("ProductsCors", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
+            //JWT AUTHENTICATION
 
             services.AddControllers();
 

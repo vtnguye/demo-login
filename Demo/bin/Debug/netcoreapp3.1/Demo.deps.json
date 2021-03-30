@@ -1487,6 +1487,14 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "Common/1.0.0": {
+        "runtime": {
+          "Common.dll": {}
+        },
+        "compile": {
+          "Common.dll": {}
+        }
+      },
       "Data/1.0.0": {
         "dependencies": {
           "Domain": "1.0.0",
@@ -1503,6 +1511,7 @@
       "Domain/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
+          "Common": "1.0.0",
           "Microsoft.AspNetCore.Http.Features": "3.0.2",
           "Microsoft.EntityFrameworkCore": "5.0.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.4",
@@ -1519,6 +1528,7 @@
       "Service/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
+          "Common": "1.0.0",
           "Data": "1.0.0",
           "Domain": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "3.1.0"
@@ -3927,6 +3937,11 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Data/1.0.0": {
       "type": "project",

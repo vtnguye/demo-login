@@ -10,6 +10,8 @@ namespace Demo.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [EnableCors("LoginCors")]
+
     public class UsersController : ControllerBase
 
     {
@@ -32,11 +34,10 @@ namespace Demo.Controllers
 
         [HttpPost]
         [Route("[action]")]
-        [EnableCors("LoginCors")]
         public IActionResult Login([FromBody] LoginDTO model)
         {
             var result = _authService.LogIn(model);
-            return Ok(result);
+            return new JsonResult(new { token = result });
         }
 
         [HttpGet]

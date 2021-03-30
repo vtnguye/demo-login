@@ -72,3 +72,5 @@ D:\DEMO\Demo\bin\Debug\netcoreapp3.1\MySqlConnector.dll
 D:\DEMO\Demo\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\DEMO\Demo\bin\Debug\netcoreapp3.1\Data.dll
 D:\DEMO\Demo\bin\Debug\netcoreapp3.1\Data.pdb
+D:\DEMO\Demo\bin\Debug\netcoreapp3.1\Common.dll
+D:\DEMO\Demo\bin\Debug\netcoreapp3.1\Common.pdb
